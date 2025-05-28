@@ -391,8 +391,8 @@ async def help_command(ctx):
     await ctx.send(embed=embed)
 
 # Fehlerbehandlung
-@bot.event
-async def on_command_error(ctx, error):
+@bot.command(name='hilfe')
+async def help_command(ctx):
     if isinstance(error, commands.MissingPermissions):
         embed = discord.Embed(
             title="❌ Keine Berechtigung",
